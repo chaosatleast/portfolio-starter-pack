@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+
+        --background-black-rgb: 13, 13, 13;
+        --background-black: #0d0d0d;
+
+        --white-100: #f4f4f4; /* Primary, clean and clear for emphasis */
+        --white-200: #e4e4e4; /* Slightly muted for secondary text */
+        --white-300: #d4d4d4; /* For less emphasized sections */
+        --white-400: #c4c4c4; /* For subtle or background elements */
+
+        --gray-100: #737272;
+        --gray-200: #a6a6a6;
+        --gray-300: #403f3e;
+        --gray-400: #262626;
+
+        --yellowish: #d9b282;
+        --vibrant-yellow: #e6f285;
+        --vibrant-yellow-500: #f9fce1;
+        --watermelon-pink: #d9597b;
+        --mint-green: #c9d9c5;
+        --cloudy-blue: #e4eaf2;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+canvas {
+    position: absolute;
+    z-index: 10; /* Higher than the SVG */
+
+    svg {
+        position: absolute;
+        z-index: 10; /* Higher than the canvas */
+    }
+}
+
+@layer components {
+    .project-detail-title {
+        @apply w-full text-[1rem] font-medium text-colors-gray-100 lg:w-1/12;
+    }
+
+    .project-line {
+        @apply mt-6 w-full border-t border-colors-gray-400 pb-6 lg:w-11/12;
+    }
+
+    .project-detail-info {
+        @apply w-full text-base font-normal text-colors-white-300 lg:mx-auto lg:max-w-2xl lg:pl-12 2xl:text-lg;
+    }
+
+    .project-section {
+        @apply items-center gap-x-12 pb-6 lg:flex;
+    }
+}
