@@ -60,7 +60,7 @@ yarn install
 
    The following screenshot shows the prompts during setup. You can use this as a guideline:
 
-   ![Prompt Guide](https://img-chaosatleast.vercel.app/images/prompt-guide.png)
+   ![Prompt Guide](https://img-chaosatleast.vercel.app/prompt-guide.png)
 
    Once set up, visit the Sanity website to check your **Project ID** and **Dataset Name**.
 
