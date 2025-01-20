@@ -104,7 +104,7 @@ Landing Page Image Animation: [https://tympanus.net/codrops/2024/02/07/on-scroll
 
 ## Credits
 
-This project was created by [Your Name](https://your-portfolio-link.com). If you find it helpful, I’d appreciate a mention or a link back to my work.
+This project was created by [ChaosAtleast](https://atleastdevspace.com). If you find it helpful, I’d appreciate a mention or a link back to my work.
 
 ---
 
