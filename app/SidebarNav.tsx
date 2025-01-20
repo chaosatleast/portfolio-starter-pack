@@ -8,7 +8,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
-function SidebarNav({ blogUrl }: { blogUrl: string }) {
+function SidebarNav({ blogUrl }: { blogUrl?: string }) {
 	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 	const [activeSection, setActiveSection] = React.useState("");
 	const router = useRouter();

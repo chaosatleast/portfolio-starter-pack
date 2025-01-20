@@ -2,14 +2,13 @@
 import TextWithIcon from "@/components/Animations/StaggerText/TextWithIcon";
 import CreativeButton from "@/components/Buttons/CreativeButton";
 import Wrapper from "@/components/Wrapper";
+import { getBlogUrl } from "@/sanity/lib/actions";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import SidebarNav from "./SidebarNav";
-import { get } from "http";
-import { getBlogUrl } from "@/sanity/lib/actions";
 
 function Navigation() {
 	const pathname = usePathname();
@@ -19,7 +18,9 @@ function Navigation() {
 	useEffect(() => {
 		const fetchBlogUrl = async () => {
 			const response = await getBlogUrl();
-			setBlogUrl(response[0].blogUrl);
+			if (response[0]) {
+				setBlogUrl(response[0]?.blogUrl);
+			}
 		};
 		fetchBlogUrl();
 	}, []);
